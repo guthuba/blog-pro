@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+
+<head>
+  <%- include('head',{}); %>
+    <title>Document</title>
+</head>
+
+<body>
+  <ul class="layui-nav layui-bg-blue">
+    <i class="layui-icon layui-icon-home" style="font-size: 30px; margin-top: 10px;"><a href="./index"></a></i>
+    <li class="layui-nav-item layui-this"><a href="./xie">写文章</a></li>
+    <li class="layui-nav-item layui-tui"><a href="">退出</a></li>
+  </ul>
+</body>
+
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head',{}); %>
+    <title>Document</title>
+</head>
+<body>
+    <div class="layui-form-item">
+        <div class="layui-input-wirte">
+            <ul class="layui-nav layui-bg-blue">
+                <i class="layui-icon layui-icon-home" style="font-size: 30px;"><a href="./index"></a></i>
+                <li class="layui-nav-item layui-this"><a href="./xie">写文章</a></li>
+                <li class="layui-nav-item layui-tui"><a href="">退出</a></li>
+              </ul>
+        </div>
+    </div>
+   
+      <div class="layui-form-item">
+        <div class="layui-input-wirte">
+            <input type="text" name="title" required lay-verify="required" placeholder="请输入文章标题" autocomplete="off" class="layui-input">
+          </div>
+    </div>
+      
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+            <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
+        </div>
+    </div>
+      
+      <div class="layui-form-item">
+        <div class="layui-input-block" >
+            <button class="layui-btn layui-btn-normal">发布</button>
+        </div>
+    </div>
+</body>
+</html>
