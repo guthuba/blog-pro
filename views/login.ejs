@@ -6,29 +6,29 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/libs/layui/css/layui.css' /> -->
     <%- include('head',{}); %>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <%- include('nav',{}); %>
     <title>Document</title>
     
 </head>
 <body>
     <div class="layui-container">  
         <div class="layui-row">
-          <form action="layui-form" action="">
+          <form action="layui-form" >
               <div class="layui-form-item">
                   <label class="layui-form-label">用户名</label>
                   <div class="layui-input-block">
-                      <input type="text" name="title" required placeholder="请输入用户名" class="layui-input">
+                      <input type="text" name="title" required placeholder="请输入用户名" class="layui-input" style="width: 300px;">
                   </div>
               </div>
               <div class="layui-form-item">
                   <label class="layui-form-label">密码</label>
                   <div class="layui-input-block">
-                      <input type="password" name="title" required placeholder="请输入密码" class="layui-input">
+                      <input type="password" name="title" required placeholder="请输入密码" class="layui-input" style="width: 300px; ">
                   </div>
               </div>
               <div class="layui-form-item">
                 <div class="layui-input-block">
-                    <button class="layui-btn">立即提交</button>
+                    <button class="layui-btn layui-btn-normal">立即提交</button>
                 </div>
             </div>
             <div class="layui-form-item">
@@ -39,4 +39,16 @@
           </form>
         </div>
 </body>
+<style>
+    .layui-p a{
+        text-align: left;
+        color: #00B7FF;
+    }
+    button{
+        margin-left: 70px;
+    }
+    p{
+        margin-left: 160px;
+    }
+</style>
 </html>

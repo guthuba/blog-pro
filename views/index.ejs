@@ -3,15 +3,74 @@
 
 <head>
   <%- include('head',{}); %>
-    <title>Document</title>
+    <%- include('nav',{}); %>
+      <title>Document</title>
 </head>
 
 <body>
-  <ul class="layui-nav layui-bg-blue">
-    <i class="layui-icon layui-icon-home" style="font-size: 30px; margin-top: 10px;"><a href="./index"></a></i>
-    <li class="layui-nav-item layui-this"><a href="./xie">写文章</a></li>
-    <li class="layui-nav-item layui-tui"><a href="">退出</a></li>
-  </ul>
+  <table class="layui-table" lay-skin="line">
+    <colgroup>
+      <col width="150">
+      <col width="200">
+      <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th>昵称</th>
+        <th>加入时间</th>
+        <th>签名</th>
+        <th></th>
+      </tr> 
+    </thead>
+    <tbody>
+      <tr>
+        <td>贤心</td>
+        <td>2016-11-29</td>
+        <td>人生就像是一场修行</td>
+        <td>
+          <a href="#">
+            <i class="layui-icon layui-icon-edit"></i>
+            修改
+          </a>
+          <a href="#">
+            <i class="layui-icon layui-icon-delete"></i>
+            删除
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>许闲心</td>
+        <td>2016-11-28</td>
+        <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+        <td>
+          <a href="#">
+            <i class="layui-icon layui-icon-edit"></i>
+            修改
+          </a>
+          <a href="#">
+            <i class="layui-icon layui-icon-delete"></i>
+            删除
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>sentsin</td>
+        <td>2016-11-27</td>
+        <td> Life is either a daring adventure or nothing.</td>
+        <td>
+          <a href="#">
+            <i class="layui-icon layui-icon-edit"></i>
+            修改
+          </a>
+          <a href="#">
+            <i class="layui-icon layui-icon-delete"></i>
+            删除
+          </a>
+        </td>
+      </tr>
+      </tr>
+    </tbody>
+  </table>
 </body>
 
 </html>

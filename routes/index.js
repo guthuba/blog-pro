@@ -22,4 +22,8 @@ router.get('/details',function(req,res){
 router.get('/xie',function(req,res){
   res.render('xie',{})
 })
+//头部公共页路由配置
+router.get('/nav',function(req,res){
+  res.render('nav',{})
+})
 module.exports = router;
