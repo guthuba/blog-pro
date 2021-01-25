@@ -1,10 +1,8 @@
 var express = require('express');
-const Joi = require('joi');
 var router = express.Router();
-// let Joi = require('joi');
+let Joi = require('joi');
 // 将用户模板导入
 let User = require('../models/user')
-
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
