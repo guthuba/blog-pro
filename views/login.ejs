@@ -6,14 +6,14 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/libs/layui/css/layui.css' /> -->
     <%- include('head',{}); %>
-    <%- include('nav',{}); %>
+    <%- include('nav',{userName}); %>
     <title>Document</title>
     
 </head>
 <body>
     <div class="layui-container">  
         <div class="layui-row">
-          <form action="layui-form" >
+          <form action="/users/login" method="post" >
               <div class="layui-form-item">
                   <label class="layui-form-label">用户名</label>
                   <div class="layui-input-block">

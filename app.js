@@ -4,10 +4,23 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+//导入
+var session = require('express-session');
+
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+// 配置
+app.use(session({
+  secret:'bname',//自己命名
+  resave:false,//发送请求的时候重新保存session
+  saveUninitialized:true,//保存初始化状态
+  cookie:{maxAge:1000*60*60*24}//保存时间
+}))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
