@@ -1,10 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
+// 文章模板导入
+let Article = require('../models/article')
 /* GET home page. */
-router.get('/',function(req,res,next){
+router.get('/',async function(req,res,next){
+  let data = await Article.find()
+  console.log(data);
   let userName = req.session.userName || ''
-  res.render('index',{userName});
+  res.render('index',{userName,data});
 })
 
 //首页路由配置

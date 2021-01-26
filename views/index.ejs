@@ -8,68 +8,43 @@
 </head>
 
 <body>
-  <table class="layui-table" lay-skin="line">
+  <table class="layui-table" lay-skin="line" style="width: 1000px;margin-left: 100px;">
     <colgroup>
       <col width="150">
       <col width="200">
       <col>
     </colgroup>
-    <thead>
+    <thead >
       <tr>
-        <th>昵称</th>
+        <th>标题</th>
         <th>加入时间</th>
-        <th>签名</th>
-        <th></th>
-      </tr> 
+        <th>内容</th>
+        <th>操作</th>
+      </tr>
     </thead>
     <tbody>
       <tr>
-        <td>贤心</td>
-        <td>2016-11-29</td>
-        <td>人生就像是一场修行</td>
+        <% data.map(item=>{
+          %>
+        <td><%= item.title %></td>
+        <td><%= item.datetime %></td>
+        <td><%= item.content %></td>
         <td>
-          <a href="#">
+          <a href="http://www.layui.com">
             <i class="layui-icon layui-icon-edit"></i>
             修改
           </a>
-          <a href="#">
+          <a href="http://www.layui.com">
             <i class="layui-icon layui-icon-delete"></i>
             删除
           </a>
         </td>
+        
       </tr>
-      <tr>
-        <td>许闲心</td>
-        <td>2016-11-28</td>
-        <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
-        <td>
-          <a href="#">
-            <i class="layui-icon layui-icon-edit"></i>
-            修改
-          </a>
-          <a href="#">
-            <i class="layui-icon layui-icon-delete"></i>
-            删除
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>sentsin</td>
-        <td>2016-11-27</td>
-        <td> Life is either a daring adventure or nothing.</td>
-        <td>
-          <a href="#">
-            <i class="layui-icon layui-icon-edit"></i>
-            修改
-          </a>
-          <a href="#">
-            <i class="layui-icon layui-icon-delete"></i>
-            删除
-          </a>
-        </td>
-      </tr>
-      </tr>
+      <% }) %>
+     
     </tbody>
   </table>
 </body>
+
 </html>
