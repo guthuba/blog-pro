@@ -5,16 +5,18 @@
   <%- include('head',{}); %>
     <%- include('nav',{userName}); %>
       <title>Document</title>
+
 </head>
 
 <body>
-  <table class="layui-table" lay-skin="line" style="width: 1000px;margin-left: 100px;">
+
+  <table class="layui-table" lay-skin="line" style="width: 1200px;margin-left: 10px;">
     <colgroup>
       <col width="150">
       <col width="200">
       <col>
     </colgroup>
-    <thead >
+    <thead>
       <tr>
         <th>标题</th>
         <th>加入时间</th>
@@ -24,27 +26,51 @@
     </thead>
     <tbody>
       <tr>
-        <% data.map(item=>{
+        <% data.blogList.map(item=>{
           %>
-        <td><%= item.title %></td>
-        <td><%= item.datetime %></td>
-        <td><%= item.content %></td>
-        <td>
-          <a href="http://www.layui.com">
-            <i class="layui-icon layui-icon-edit"></i>
-            修改
-          </a>
-          <a href="http://www.layui.com">
-            <i class="layui-icon layui-icon-delete"></i>
-            删除
-          </a>
-        </td>
-        
+          <td>
+            <%= item.title %>
+          </td>
+          <td>
+            <%= item.datetime %>
+          </td>
+          <td>
+            <%= item.content %>
+          </td>
+          <td>
+            <a href="http://www.layui.com">
+              <i class="layui-icon layui-icon-edit"></i>
+              修改
+            </a>
+            <a href="http://www.layui.com">
+              <i class="layui-icon layui-icon-delete"></i>
+              删除
+            </a>
+          </td>
+
       </tr>
       <% }) %>
-     
+
     </tbody>
   </table>
+  <div style="text-align: center;">
+    <span>
+      <% for(let i=1;i <=data.pagesTotle;i++){ %>
+
+        <a href="/?page=<%=i%>" style="color: #00B7FF;">
+          <%= i %>
+        </a>
+
+        <%}%>
+    </span>
+    <!-- <span class="layui-badge layui-bg-blue"><a href="">2</a></span>
+    <span class="layui-badge layui-bg-blue"><a href="">3</a></span>
+    <span class="layui-badge layui-bg-blue"><a href="">4</a></span>
+    <span class="layui-badge layui-bg-blue"><a href="">5</a></span> -->
+
+
+  </div>
+
 </body>
 
 </html>
