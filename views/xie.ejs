@@ -13,16 +13,18 @@
       <div class="layui-form-item" style="width: 1200px;margin-left: 10px;">
         <div class="layui-input-wirte">
           <input type="text" name="title" required lay-verify="required" placeholder="请输入文章标题" autocomplete="off"
-            class="layui-input">
+            class="layui-input" value="<%=data.title%>">
         </div>
       </div>
-    
+
       <div class="layui-form-item" style="width: 1200px;margin-left: 10px;">
         <div class="layui-input-textarea">
-          <textarea name="content"  id="editor" placeholder="请输入内容" class="layui-textarea"></textarea>
+          <textarea name="content" id="editor" placeholder="请输入内容" class="layui-textarea">
+            <%=data.content%>
+          </textarea>
         </div>
       </div>
-    
+
       <div class="layui-form-item">
         <div class="layui-input-block">
           <button type="submit" class="layui-btn layui-btn-normal" style="margin-left: 400px;">发布</button>
@@ -33,16 +35,16 @@
   <script src="/libs/ckeditor5-build-classic/ckeditor.js"></script>
   <script>
     ClassicEditor
-        .create( document.querySelector( '#editor' ),{
-          ckfinder: {
-            // Upload the images to the server using the CKFinder QuickUpload command.
-            uploadUrl: '/article/upload'
+      .create(document.querySelector('#editor'), {
+        ckfinder: {
+          // Upload the images to the server using the CKFinder QuickUpload command.
+          uploadUrl: '/article/upload'
         }
-        } )
-        .catch( error => {
-            console.error( error );
-        } );
-</script>
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  </script>
 </body>
 
 </html>

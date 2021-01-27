@@ -29,20 +29,22 @@
         <% data.blogList.map(item=>{
           %>
           <td>
-            <%= item.title %>
+            <a href="/details?_id=<%= item._id%>"><%= item.title %></a>
           </td>
           <td>
-            <%= item.datetime %>
+            <a href="/details_id=<%= item._id%>"><%= item.datetime %></a>
+            
           </td>
           <td>
-            <%= item.content %>
+            <a href="/details_id=<%= item._id%>"><%- item.content %></a>
+            
           </td>
           <td>
-            <a href="http://www.layui.com">
+            <a href="/xie?_id=<%=item._id%>&page=<%=data.currPage%>">
               <i class="layui-icon layui-icon-edit"></i>
-              修改
+              编辑
             </a>
-            <a href="http://www.layui.com">
+            <a href="">
               <i class="layui-icon layui-icon-delete"></i>
               删除
             </a>
