@@ -22,6 +22,7 @@ let pageSize = 2
 //确定每页显示的数据
 data.blogList = await Article.find()
 .limit(pageSize)//限定展示出来的条数
+.sort({_id:'desc'})//倒叙
 .skip((data.currPage - 1) * pageSize)//限定从第几条开始截取
 // 总数据
 let blogAll = await Article.find()
