@@ -57,13 +57,24 @@ router.get('/zhuce', function (req, res) {
 //详情页路由配置
 router.get('/details', async function (req, res) {
   let userName = req.session.userName || ''
-  let id = req.query._id
-  console.log(id);
+  let _id = req.query._id || ''
+  if (_id) {
+    let page = req.query.page
+    console.log(_id);
+    console.log(page);
 
-  let data = await Article.findOne({ _id: id })
-
-
-  res.render('details', { userName, data })
+    //文章数据查询渲染
+    let data = await Article.findOne({ _id:_id})
+    data.page = page
+    //时间处理
+    res.render('details',{userName,data})
+  } else {
+    let data = {
+      title:'',
+      content:'',
+    }
+    res.render('details', { userName,data })
+  }
 })
 //写文章页路由配置
 router.get('/xie', async (req, res,next) => {
@@ -76,10 +87,15 @@ router.get('/xie', async (req, res,next) => {
 
     //文章数据查询渲染
     let data = await Article.findOne({ _id:_id})
+    data.page = page
     //时间处理
     res.render('xie',{userName,data})
   } else {
-    res.render('xie', { userName })
+    let data = {
+      title:'',
+      content:'',
+    }
+    res.render('xie', { userName,data })
   }
 
 })

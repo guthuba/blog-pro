@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 //实现用户信息提交,注册事项
 // Response响应
 // Request请求
-router.post('/addUser', async(req, res, next)=>{
+router.post('/addUser', async (req, res, next)=>{
   // 通过req.body获取信息
   console.log(req.body);
   // res.send('点击注册了')

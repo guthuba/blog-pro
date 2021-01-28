@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('head',{}); %>
-    <%- include('nav',{}); %>
-    <title>Document</title>
+        <%- include('nav',{}); %>
+            <title>Document</title>
 </head>
+
 <body>
-    <div class="layui-container">  
+    <div class="layui-container">
         <div class="layui-row">
-          <form class="layui-form" action="/users/addUser" method="post">
-              <div class="layui-form-item">
-                  <label class="layui-form-label">用户名</label>
-                  <div class="layui-input-block">
-                      <input type="text" name="userName" required placeholder="请输入用户名" class="layui-input" style="width: 300px;">
-                  </div>
-              </div>
-              <div class="layui-form-item">
-                  <label class="layui-form-label">密码</label>
-                  <div class="layui-input-block">
-                      <input type="password" name="password" required placeholder="请输入密码" class="layui-input" style="width: 300px;">
-                  </div>
-              </div>
-              <div class="layui-form-item">
-                <label class="layui-form-label">密码</label>
-                <div class="layui-input-block">
-                    <input type="password" name="passwordC" required placeholder="请确认密码" class="layui-input" style="width: 300px;">
+            <form class="layui-form" action="/users/addUser" method="post">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="userName" required placeholder="请输入用户名" class="layui-input"
+                            style="width: 300px;">
+                    </div>
                 </div>
-            </div>
-              <div class="layui-form-item">
-                <div class="layui-input-block">
-                    <button class="layui-btn layui-btn-normal">注册</button>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="password" required placeholder="请输入密码" class="layui-input"
+                            style="width: 300px;">
+                    </div>
                 </div>
-            </div>
-            <div class="layui-form-item">
-                <div class="layui-p">
-                    <p>已有账号，<a href="./login">立即登录</a>！</p>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="passwordC" required placeholder="请确认密码" class="layui-input"
+                            style="width: 300px;">
+                    </div>
                 </div>
-            </div>
-          </form>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn layui-btn-normal">注册</button>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-p">
+                        <p>已有账号，<a href="./login">立即登录</a>！</p>
+                    </div>
+                </div>
+            </form>
         </div>
 </body>
 <style>
-    .layui-p a{
+    .layui-p a {
         text-align: left;
         color: #00B7FF;
     }
-    button{
+
+    button {
         margin-left: 85px;
     }
-    p{
+
+    p {
         margin-left: 160px;
     }
 </style>
+
 </html>
