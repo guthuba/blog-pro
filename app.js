@@ -56,7 +56,7 @@ app.get('*', (req, res, next) => {
     // path不是登录也不是注册
     if (path !== '/login' && path !== '/zhuce') {
       // 拦截重定向
-      // return res.redirect('/login')
+      return res.redirect('/login')
     }
   }
   next()
